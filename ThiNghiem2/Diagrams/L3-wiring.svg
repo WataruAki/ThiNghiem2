@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<rect width="100%" height="100%" fill="#f4f7fb"/>
+<text x="80" y="68" font-family="Segoe UI,Arial,sans-serif" font-size="26px" font-weight="700" text-anchor="start" fill="#1f3a5b">THÍ NGHIỆM KHOA HỌC KỸ THUẬT 2</text>
+<text x="80" y="130" font-family="Segoe UI,Arial,sans-serif" font-size="42px" font-weight="700" text-anchor="start" fill="#102a43">Bài 3 · ADC, lọc nhiễu và LEDC</text>
+<text x="80" y="168" font-family="Segoe UI,Arial,sans-serif" font-size="23px" font-weight="400" text-anchor="start" fill="#52667a">Biến trở 10 kΩ vào ADC1 GPIO34; LED PWM trên GPIO18.</text>
+<rect x="80" y="220" width="500" height="700" rx="22" fill="#ffffff" stroke="#c8d5e2" stroke-width="2"/>
+<rect x="110" y="250" width="440" height="112" rx="16" fill="#132b3f" stroke="#132b3f" stroke-width="1"/>
+<text x="330" y="296" font-family="Segoe UI,Arial,sans-serif" font-size="29px" font-weight="700" text-anchor="middle" fill="#ffffff">DOIT ESP32 DevKit V1</text>
+<text x="330" y="334" font-family="Segoe UI,Arial,sans-serif" font-size="19px" font-weight="400" text-anchor="middle" fill="#b9d7eb">ESP32 cổ điển · 30 chân</text>
+<rect x="120" y="405" width="420" height="78" rx="12" fill="#f8fafc" stroke="#dde5ed" stroke-width="1"/>
+<circle cx="145" cy="443" r="10" fill="#dc3545" stroke="none" stroke-width="1"/>
+<text x="174" y="436" font-family="Segoe UI,Arial,sans-serif" font-size="24px" font-weight="700" text-anchor="start" fill="#102a43">3V3</text>
+<text x="174" y="463" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="400" text-anchor="start" fill="#64778a">Nguồn biến trở</text>
+<polyline points="550,443 580,443" fill="none" stroke="#dc3545" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="120" y="517" width="420" height="78" rx="12" fill="#f8fafc" stroke="#dde5ed" stroke-width="1"/>
+<circle cx="145" cy="555" r="10" fill="#e7b416" stroke="none" stroke-width="1"/>
+<text x="174" y="548" font-family="Segoe UI,Arial,sans-serif" font-size="24px" font-weight="700" text-anchor="start" fill="#102a43">GPIO34</text>
+<text x="174" y="575" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="400" text-anchor="start" fill="#64778a">ADC1 · input</text>
+<polyline points="550,555 580,555" fill="none" stroke="#e7b416" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="120" y="629" width="420" height="78" rx="12" fill="#f8fafc" stroke="#dde5ed" stroke-width="1"/>
+<circle cx="145" cy="667" r="10" fill="#dc3545" stroke="none" stroke-width="1"/>
+<text x="174" y="660" font-family="Segoe UI,Arial,sans-serif" font-size="24px" font-weight="700" text-anchor="start" fill="#102a43">GPIO18</text>
+<text x="174" y="687" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="400" text-anchor="start" fill="#64778a">LEDC · PWM</text>
+<polyline points="550,667 580,667" fill="none" stroke="#dc3545" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="120" y="741" width="420" height="78" rx="12" fill="#f8fafc" stroke="#dde5ed" stroke-width="1"/>
+<circle cx="145" cy="779" r="10" fill="#202b36" stroke="none" stroke-width="1"/>
+<text x="174" y="772" font-family="Segoe UI,Arial,sans-serif" font-size="24px" font-weight="700" text-anchor="start" fill="#102a43">GND</text>
+<text x="174" y="799" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="400" text-anchor="start" fill="#64778a">Mass chung</text>
+<polyline points="550,779 580,779" fill="none" stroke="#202b36" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="120" y="875" font-family="Segoe UI,Arial,sans-serif" font-size="17px" font-weight="400" text-anchor="start" fill="#64778a">Dùng chung GND giữa ESP32 và linh kiện.</text>
+<rect x="680" y="220" width="840" height="300" rx="22" fill="#ffffff" stroke="#c8d5e2" stroke-width="2"/>
+<text x="725" y="273" font-family="Segoe UI,Arial,sans-serif" font-size="26px" font-weight="700" text-anchor="start" fill="#1f3a5b">BIẾN TRỞ 10 kΩ — ADC 12-bit</text>
+<text x="725" y="310" font-family="Segoe UI,Arial,sans-serif" font-size="19px" font-weight="400" text-anchor="start" fill="#52667a">Hai đầu ngoài vào 3V3/GND · chân giữa là wiper</text>
+<rect x="950" y="347" width="230" height="92" rx="16" fill="#e8edf3" stroke="#8295a8" stroke-width="3"/>
+<circle cx="1065" cy="393" r="31" fill="#ffffff" stroke="#53687b" stroke-width="4"/>
+<polyline points="1065,393 1090,362" fill="none" stroke="#e7b416" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1065" y="465" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="700" text-anchor="middle" fill="#52667a">10 kΩ</text>
+<circle cx="990" cy="465" r="8" fill="#334155" stroke="none" stroke-width="1"/>
+<circle cx="1065" cy="465" r="8" fill="#334155" stroke="none" stroke-width="1"/>
+<circle cx="1140" cy="465" r="8" fill="#334155" stroke="none" stroke-width="1"/>
+<polyline points="580,432 650,432 650,340 990,340 990,465" fill="none" stroke="#dc3545" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="580,544 650,544 650,370 1065,370 1065,465" fill="none" stroke="#e7b416" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="580,768 650,768 650,490 1140,490 1140,465" fill="none" stroke="#202b36" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="715" y="351" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="700" text-anchor="start" fill="#a51f2d">3V3</text>
+<text x="715" y="403" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="700" text-anchor="start" fill="#8a6b00">GPIO34 ADC1</text>
+<text x="715" y="484" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="700" text-anchor="start" fill="#202b36">GND</text>
+<rect x="680" y="550" width="840" height="370" rx="22" fill="#ffffff" stroke="#c8d5e2" stroke-width="2"/>
+<text x="725" y="602" font-family="Segoe UI,Arial,sans-serif" font-size="26px" font-weight="700" text-anchor="start" fill="#1f3a5b">LED ĐIỀU KHIỂN BẰNG LEDC</text>
+<text x="725" y="639" font-family="Segoe UI,Arial,sans-serif" font-size="19px" font-weight="400" text-anchor="start" fill="#52667a">GPIO18 → điện trở 220–330 Ω → LED → GND</text>
+<polyline points="580,656 640,656 640,735 795,735" fill="none" stroke="#dc3545" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="645" y="718" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="700" text-anchor="start" fill="#a51f2d">GPIO18</text>
+<rect x="835" y="709" width="180" height="52" rx="8" fill="#fff4df" stroke="#d99b25" stroke-width="3"/>
+<text x="925" y="734" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="700" text-anchor="middle" fill="#7c5310">220–330 Ω</text>
+<polyline points="795,735 835,735" fill="none" stroke="#dc3545" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1015,735 1100,735" fill="none" stroke="#dc3545" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1140" cy="735" r="34" fill="#fff0f1" stroke="#b32431" stroke-width="5"/>
+<polyline points="1117,758 1163,712" fill="none" stroke="#b32431" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1149,697 1165,681" fill="none" stroke="#b32431" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1165,681 1155,684" fill="none" stroke="#b32431" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1160,708 1178,690" fill="none" stroke="#b32431" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1178,690 1167,693" fill="none" stroke="#b32431" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1174,735 1290,735 1290,820 1370,820" fill="none" stroke="#202b36" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1378" y="812" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="700" text-anchor="start" fill="#202b36">GND</text>
+<rect x="725" y="850" width="750" height="44" rx="10" fill="#edf4fb" stroke="#c8d5e2" stroke-width="1"/>
+<text x="1100" y="875" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="700" text-anchor="middle" fill="#1f3a5b">ADC1 → trung bình 8 mẫu → LEDC 5 kHz / 8-bit</text>
+</svg>
