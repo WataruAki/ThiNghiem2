@@ -7,7 +7,6 @@ Bộ bài có ba thư mục project chính (`L1`, `L2`, `L3`), mỗi thư mục 
 - `L1/` — LED fading; hai environment chọn source polling hoặc ngắt GPIO ở `Polling/` và `Interrupt/`; hai thư mục mode có cấu hình độc lập nếu muốn mở riêng.
 - `L2/` — đếm cạnh nút, so sánh cạnh thô với cạnh đã debounce.
 - `L3/` — ADC 12-bit, moving average 8 mẫu và LEDC.
-- `Diagrams/` — sơ đồ mạch Fritzing/ảnh xuất dùng chung L1–L2 và sơ đồ riêng L3.
 
 ## Cấu hình chung
 
@@ -53,8 +52,6 @@ Biến trở đưa điện áp wiper vào ADC1 GPIO34; code đọc ADC 12-bit, t
 
 Các ô kết quả đo để trống cho tới khi chạy mạch thật; không có số liệu phần cứng được giả lập trong bộ source này.
 
-## Sơ đồ đấu nối
+## Lưu ý đấu nối
 
-Mở `Diagrams/L1-L2.fzz` và `Diagrams/L3.fzz` bằng Fritzing để xem/sửa project. Ảnh PNG và SVG trong cùng thư mục là sơ đồ đấu dây để xem nhanh. File L1–L2 giữ nguyên sơ đồ Fritzing đã có trong tài liệu; sơ đồ xem nhanh bổ sung điện trở 220–330 Ω nối tiếp LED rời để bảo vệ LED và GPIO.
-
-Lưu ý điện áp: chỉ cấp 3.3 V cho GPIO/ADC; không đưa 5 V vào chân ESP32. GPIO34 chỉ dùng làm input. Với LED rời, mắc điện trở 220–330 Ω nối tiếp.
+Chỉ cấp 3.3 V cho GPIO/ADC; không đưa 5 V vào chân ESP32. GPIO34 chỉ dùng làm input. Với LED rời, mắc điện trở 220–330 Ω nối tiếp.
