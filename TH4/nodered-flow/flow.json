@@ -1,0 +1,327 @@
+[
+  {
+    "id": "f404000000000001",
+    "type": "tab",
+    "label": "TH4 · ESP32 MQTT",
+    "disabled": false,
+    "info": "Đổi YOUR_SV_ID trong hai topic MQTT và dùng cùng broker với ESP32.",
+    "env": []
+  },
+  {
+    "id": "f404000000000006",
+    "type": "mqtt in",
+    "z": "f404000000000001",
+    "name": "Nhận telemetry",
+    "topic": "aet2022/YOUR_SV_ID/telemetry",
+    "qos": "0",
+    "datatype": "json",
+    "broker": "f404000000000005",
+    "nl": false,
+    "rap": true,
+    "rh": 0,
+    "inputs": 0,
+    "x": 160,
+    "y": 120,
+    "wires": [
+      [
+        "f404000000000007"
+      ]
+    ]
+  },
+  {
+    "id": "f404000000000007",
+    "type": "function",
+    "z": "f404000000000001",
+    "name": "Tách số đo và trạng thái",
+    "func": "const data = msg.payload;\nif (!data || typeof data !== 'object' || Array.isArray(data)) {\n    node.warn('Expected a telemetry JSON object');\n    return null;\n}\n\nconst temperature = Number.isFinite(data.temp) ? { payload: data.temp, topic: 'Nhiệt độ' } : null;\nconst humidity = Number.isFinite(data.hum) ? { payload: data.hum } : null;\nconst uptime = Number.isFinite(data.uptime) ? `${data.uptime} s` : '—';\nconst rssi = Number.isFinite(data.rssi) ? `${data.rssi} dBm` : '—';\nconst source = data.source === 'demo' ? 'Demo' : data.source === 'sht31' ? 'SHT31' : 'Không rõ';\nconst sensor = temperature && humidity ? source : `${source} · thiếu số đo`;\nconst button = data.button === true ? 'ĐANG NHẤN' : data.button === false ? 'ĐÃ NHẢ' : '—';\nconst presses = Number.isInteger(data.presses) ? ` · ${data.presses} lần` : '';\nconst led = data.led === true ? 'BẬT' : data.led === false ? 'TẮT' : '—';\n\nreturn [temperature, humidity,\n    { payload: `${sensor} · uptime ${uptime} · RSSI ${rssi}` },\n    { payload: button + presses }, { payload: led }];",
+    "outputs": 5,
+    "timeout": 0,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 440,
+    "y": 120,
+    "wires": [
+      [
+        "f404000000000008",
+        "f40400000000000a"
+      ],
+      [
+        "f404000000000009"
+      ],
+      [
+        "f40400000000000b"
+      ],
+      [
+        "f40400000000000c"
+      ],
+      [
+        "f40400000000000d"
+      ]
+    ]
+  },
+  {
+    "id": "f404000000000008",
+    "type": "ui_gauge",
+    "z": "f404000000000001",
+    "name": "Nhiệt độ",
+    "group": "f404000000000003",
+    "order": 1,
+    "width": 6,
+    "height": 4,
+    "gtype": "gage",
+    "title": "Nhiệt độ",
+    "label": "°C",
+    "format": "{{value}}",
+    "min": 0,
+    "max": 60,
+    "colors": [
+      "#2ca25f",
+      "#fec44f",
+      "#de2d26"
+    ],
+    "seg1": "",
+    "seg2": "",
+    "diff": false,
+    "className": "",
+    "x": 790,
+    "y": 60,
+    "wires": []
+  },
+  {
+    "id": "f404000000000009",
+    "type": "ui_gauge",
+    "z": "f404000000000001",
+    "name": "Độ ẩm",
+    "group": "f404000000000003",
+    "order": 2,
+    "width": 6,
+    "height": 4,
+    "gtype": "gage",
+    "title": "Độ ẩm",
+    "label": "%",
+    "format": "{{value}}",
+    "min": 0,
+    "max": 100,
+    "colors": [
+      "#2ca25f",
+      "#fec44f",
+      "#de2d26"
+    ],
+    "seg1": "",
+    "seg2": "",
+    "diff": false,
+    "className": "",
+    "x": 790,
+    "y": 110,
+    "wires": []
+  },
+  {
+    "id": "f40400000000000a",
+    "type": "ui_chart",
+    "z": "f404000000000001",
+    "name": "Nhiệt độ theo thời gian",
+    "group": "f404000000000003",
+    "order": 3,
+    "width": 12,
+    "height": 5,
+    "label": "Nhiệt độ theo thời gian (°C)",
+    "chartType": "line",
+    "legend": "false",
+    "xformat": "HH:mm:ss",
+    "interpolate": "linear",
+    "nodata": "Đang chờ số đo",
+    "dot": false,
+    "ymin": "",
+    "ymax": "",
+    "removeOlder": 10,
+    "removeOlderPoints": "",
+    "removeOlderUnit": "60",
+    "cutout": 0,
+    "useOneColor": false,
+    "colors": [
+      "#1479b8",
+      "#2ca25f",
+      "#ff7f0e",
+      "#d62728",
+      "#9467bd",
+      "#8c564b",
+      "#e377c2",
+      "#7f7f7f",
+      "#bcbd22"
+    ],
+    "useOldStyle": false,
+    "className": "",
+    "x": 830,
+    "y": 160,
+    "wires": [
+      [],
+      []
+    ]
+  },
+  {
+    "id": "f40400000000000b",
+    "type": "ui_text",
+    "z": "f404000000000001",
+    "name": "Nguồn và kết nối",
+    "group": "f404000000000003",
+    "order": 4,
+    "width": 0,
+    "height": 0,
+    "label": "Nguồn và kết nối",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 800,
+    "y": 210,
+    "wires": []
+  },
+  {
+    "id": "f40400000000000c",
+    "type": "ui_text",
+    "z": "f404000000000001",
+    "name": "Nút vật lý",
+    "group": "f404000000000004",
+    "order": 3,
+    "width": 0,
+    "height": 0,
+    "label": "Nút vật lý",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 800,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "f40400000000000d",
+    "type": "ui_text",
+    "z": "f404000000000001",
+    "name": "LED từ ESP32",
+    "group": "f404000000000004",
+    "order": 4,
+    "width": 0,
+    "height": 0,
+    "label": "LED từ ESP32",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "className": "",
+    "x": 800,
+    "y": 310,
+    "wires": []
+  },
+  {
+    "id": "f404000000000015",
+    "type": "ui_button",
+    "z": "f404000000000001",
+    "name": "BẬT LED",
+    "group": "f404000000000004",
+    "order": 1,
+    "width": 4,
+    "height": 1,
+    "passthru": false,
+    "label": "BẬT LED",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "payload": "1",
+    "payloadType": "str",
+    "topic": "",
+    "topicType": "str",
+    "x": 160,
+    "y": 400,
+    "wires": [
+      [
+        "f404000000000017"
+      ]
+    ]
+  },
+  {
+    "id": "f404000000000016",
+    "type": "ui_button",
+    "z": "f404000000000001",
+    "name": "TẮT LED",
+    "group": "f404000000000004",
+    "order": 2,
+    "width": 4,
+    "height": 1,
+    "passthru": false,
+    "label": "TẮT LED",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "payload": "0",
+    "payloadType": "str",
+    "topic": "",
+    "topicType": "str",
+    "x": 160,
+    "y": 450,
+    "wires": [
+      [
+        "f404000000000017"
+      ]
+    ]
+  },
+  {
+    "id": "f404000000000017",
+    "type": "mqtt out",
+    "z": "f404000000000001",
+    "name": "Gửi lệnh LED",
+    "topic": "aet2022/YOUR_SV_ID/cmd/led",
+    "qos": "1",
+    "retain": "false",
+    "broker": "f404000000000005",
+    "x": 440,
+    "y": 425,
+    "wires": []
+  },
+  {
+    "id": "f404000000000005",
+    "type": "mqtt-broker",
+    "name": "Broker TH4",
+    "broker": "test.mosquitto.org",
+    "port": "1883",
+    "clientid": "",
+    "autoConnect": true,
+    "usetls": false,
+    "protocolVersion": "4",
+    "keepalive": "60",
+    "cleansession": true
+  },
+  {
+    "id": "f404000000000002",
+    "type": "ui_tab",
+    "name": "TH4 · ESP32",
+    "icon": "dashboard",
+    "order": 1,
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "f404000000000003",
+    "type": "ui_group",
+    "name": "Số đo",
+    "tab": "f404000000000002",
+    "order": 1,
+    "disp": true,
+    "width": "12",
+    "collapse": false,
+    "className": ""
+  },
+  {
+    "id": "f404000000000004",
+    "type": "ui_group",
+    "name": "Điều khiển",
+    "tab": "f404000000000002",
+    "order": 2,
+    "disp": true,
+    "width": "8",
+    "collapse": false,
+    "className": ""
+  }
+]
