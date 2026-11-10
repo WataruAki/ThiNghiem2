@@ -22,7 +22,7 @@ Với MQTT, sửa `TH3_MQTT_GROUP` thành topic riêng của nhóm, ví dụ `nh
 
 ## Bài 4 — sơ đồ
 
-`Bai4-HTTP/Bai4-Fritzing.fzz` là project Fritzing có thể mở và chỉnh sửa; `wiring-diagram.svg` là sơ đồ xem nhanh. Mạch giữ cách đấu TH1: LED rời GPIO2 qua điện trở 220–330 Ω xuống GND; nút GPIO4 được giữ trên sơ đồ nhưng không tham gia điều khiển HTTP. Chỉ đưa 3.3 V vào GPIO.
+`Bai4-HTTP/Bai4-Fritzing.fzz` là project Fritzing có thể mở và chỉnh sửa; `wiring-diagram.svg` là sơ đồ xem nhanh. Mạch Fritzing điều khiển LED rời tại GPIO2 qua điện trở 220 Ω xuống GND. Chỉ đưa 3.3 V vào GPIO.
 
 ## Báo cáo và minh chứng
 
