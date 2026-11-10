@@ -1,5 +1,7 @@
 # Thí nghiệm trong Khoa học Kỹ thuật 2 — Buổi 1
 
+Project TH3 về Wi-Fi, BLE, ESP-NOW, HTTP và MQTT nằm trong [`TH3/`](TH3/README.md).
+
 Bộ bài có ba thư mục project chính (`L1`, `L2`, `L3`), mỗi thư mục có `src/main.cpp` và `platformio.ini`. Bài 1 có hai bản code riêng để so sánh; có thể build qua hai environment trong `L1` hoặc mở trực tiếp `Polling`/`Interrupt`, mỗi mode cũng có `platformio.ini` riêng.
 
 ## Cấu trúc

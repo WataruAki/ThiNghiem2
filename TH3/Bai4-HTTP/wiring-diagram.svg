@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<rect width="100%" height="100%" fill="#f4f7fb"/>
+<text x="80" y="68" font-family="Segoe UI,Arial,sans-serif" font-size="26px" font-weight="700" text-anchor="start" fill="#1f3a5b">THÍ NGHIỆM KHOA HỌC KỸ THUẬT 3</text>
+<text x="80" y="130" font-family="Segoe UI,Arial,sans-serif" font-size="42px" font-weight="700" text-anchor="start" fill="#102a43">Bài 4 · HTTP điều khiển LED</text>
+<text x="80" y="168" font-family="Segoe UI,Arial,sans-serif" font-size="23px" font-weight="400" text-anchor="start" fill="#52667a">ESP32 DevKit V1: LED GPIO2 qua điện trở; giữ nút GPIO4 theo mạch TH1.</text>
+<rect x="80" y="220" width="500" height="700" rx="22" fill="#ffffff" stroke="#c8d5e2" stroke-width="2"/>
+<rect x="110" y="250" width="440" height="112" rx="16" fill="#132b3f" stroke="#132b3f" stroke-width="1"/>
+<text x="330" y="296" font-family="Segoe UI,Arial,sans-serif" font-size="29px" font-weight="700" text-anchor="middle" fill="#ffffff">DOIT ESP32 DevKit V1</text>
+<text x="330" y="334" font-family="Segoe UI,Arial,sans-serif" font-size="19px" font-weight="400" text-anchor="middle" fill="#b9d7eb">ESP32 cổ điển · 30 chân</text>
+<rect x="120" y="420" width="420" height="78" rx="12" fill="#f8fafc" stroke="#dde5ed" stroke-width="1"/>
+<circle cx="145" cy="458" r="10" fill="#f59e0b" stroke="none" stroke-width="1"/>
+<text x="174" y="451" font-family="Segoe UI,Arial,sans-serif" font-size="24px" font-weight="700" text-anchor="start" fill="#102a43">GPIO4</text>
+<text x="174" y="478" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="400" text-anchor="start" fill="#64778a">Nút TH1; HTTP không dùng</text>
+<polyline points="550,458 580,458" fill="none" stroke="#f59e0b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="120" y="545" width="420" height="78" rx="12" fill="#f8fafc" stroke="#dde5ed" stroke-width="1"/>
+<circle cx="145" cy="583" r="10" fill="#dc3545" stroke="none" stroke-width="1"/>
+<text x="174" y="576" font-family="Segoe UI,Arial,sans-serif" font-size="24px" font-weight="700" text-anchor="start" fill="#102a43">GPIO2</text>
+<text x="174" y="603" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="400" text-anchor="start" fill="#64778a">Web server điều khiển LED</text>
+<polyline points="550,583 580,583" fill="none" stroke="#dc3545" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="120" y="670" width="420" height="78" rx="12" fill="#f8fafc" stroke="#dde5ed" stroke-width="1"/>
+<circle cx="145" cy="708" r="10" fill="#202b36" stroke="none" stroke-width="1"/>
+<text x="174" y="701" font-family="Segoe UI,Arial,sans-serif" font-size="24px" font-weight="700" text-anchor="start" fill="#102a43">GND</text>
+<text x="174" y="728" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="400" text-anchor="start" fill="#64778a">Mass chung</text>
+<polyline points="550,708 580,708" fill="none" stroke="#202b36" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="120" y="875" font-family="Segoe UI,Arial,sans-serif" font-size="17px" font-weight="400" text-anchor="start" fill="#64778a">Dùng chung GND giữa ESP32 và linh kiện.</text>
+<rect x="680" y="220" width="840" height="280" rx="22" fill="#ffffff" stroke="#c8d5e2" stroke-width="2"/>
+<text x="725" y="273" font-family="Segoe UI,Arial,sans-serif" font-size="26px" font-weight="700" text-anchor="start" fill="#1f3a5b">NÚT NHẤN — BÀI 1 VÀ BÀI 2</text>
+<text x="725" y="310" font-family="Segoe UI,Arial,sans-serif" font-size="19px" font-weight="400" text-anchor="start" fill="#52667a">INPUT_PULLUP · nhấn nút tạo mức LOW trên GPIO4</text>
+<polyline points="580,447 760,447 760,395 840,395" fill="none" stroke="#f59e0b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="790" y="383" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="700" text-anchor="start" fill="#a56200">GPIO4</text>
+<circle cx="855" cy="395" r="9" fill="#ffffff" stroke="#334155" stroke-width="4"/>
+<circle cx="1040" cy="395" r="9" fill="#ffffff" stroke="#334155" stroke-width="4"/>
+<polyline points="855,395 920,367" fill="none" stroke="#334155" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1000,395 1040,395" fill="none" stroke="#334155" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="910" y="328" width="95" height="52" rx="10" fill="#e7f4ea" stroke="#85bc91" stroke-width="2"/>
+<text x="957" y="353" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="700" text-anchor="middle" fill="#25603b">N.O.</text>
+<text x="950" y="443" font-family="Segoe UI,Arial,sans-serif" font-size="20px" font-weight="700" text-anchor="middle" fill="#102a43">Nút nhấn</text>
+<polyline points="1040,395 1180,395 1180,444 1370,444" fill="none" stroke="#202b36" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1378" y="436" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="700" text-anchor="start" fill="#202b36">GND</text>
+<text x="725" y="472" font-family="Segoe UI,Arial,sans-serif" font-size="17px" font-weight="400" text-anchor="start" fill="#64778a">Nhấn: GPIO4 được nối xuống GND; nhả: điện trở kéo lên nội giữ mức HIGH.</text>
+<rect x="680" y="535" width="840" height="385" rx="22" fill="#ffffff" stroke="#c8d5e2" stroke-width="2"/>
+<text x="725" y="588" font-family="Segoe UI,Arial,sans-serif" font-size="26px" font-weight="700" text-anchor="start" fill="#1f3a5b">LED HTTP — GPIO2</text>
+<text x="725" y="624" font-family="Segoe UI,Arial,sans-serif" font-size="19px" font-weight="400" text-anchor="start" fill="#52667a">Mắc điện trở giới hạn dòng 220–330 Ω nối tiếp LED.</text>
+<polyline points="580,572 640,572 640,735 795,735" fill="none" stroke="#dc3545" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="645" y="718" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="700" text-anchor="start" fill="#a51f2d">GPIO2</text>
+<polyline points="795,735 835,735" fill="none" stroke="#dc3545" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="835" y="709" width="180" height="52" rx="8" fill="#fff4df" stroke="#d99b25" stroke-width="3"/>
+<text x="925" y="734" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="700" text-anchor="middle" fill="#7c5310">220–330 Ω</text>
+<polyline points="1015,735 1100,735" fill="none" stroke="#dc3545" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1140" cy="735" r="34" fill="#fff0f1" stroke="#b32431" stroke-width="5"/>
+<polyline points="1117,758 1163,712" fill="none" stroke="#b32431" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1149,697 1165,681" fill="none" stroke="#b32431" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1165,681 1155,684" fill="none" stroke="#b32431" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1160,708 1178,690" fill="none" stroke="#b32431" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1178,690 1167,693" fill="none" stroke="#b32431" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1140" y="801" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="700" text-anchor="middle" fill="#102a43">LED</text>
+<polyline points="1174,735 1290,735 1290,820 1370,820" fill="none" stroke="#202b36" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1378" y="812" font-family="Segoe UI,Arial,sans-serif" font-size="18px" font-weight="700" text-anchor="start" fill="#202b36">GND</text>
+<text x="725" y="870" font-family="Segoe UI,Arial,sans-serif" font-size="16px" font-weight="400" text-anchor="start" fill="#64778a">Điện thoại cùng Wi-Fi mở IP ESP32; /on, /off và /toggle đặt trạng thái GPIO2.</text>
+<text x="725" y="897" font-family="Segoe UI,Arial,sans-serif" font-size="16px" font-weight="400" text-anchor="start" fill="#64778a">Nút GPIO4 được giữ theo mạch TH1 nhưng không được web server sử dụng.</text>
+</svg>
